@@ -8,11 +8,29 @@ type ListNode struct {
 }
 
 func main() {
-	var l1 ListNode
-	l1.Val = 1
-	var l2 ListNode
-	l2.Val = 2
-	l1.Next = &l2
+	var list ListNode
+	//l1.Val = 1
+	//var l2 ListNode
+	//l2.Val = 2
+	//l1.Next = &l2
 
-	fmt.Println(l1, l2)
+	ints := []int{1, 2, 3}
+
+	for k, v := range ints {
+
+		if k == 0 {
+			list.Val = v
+			list.Next = nil
+			continue
+		}
+
+		var temp ListNode
+		temp.Val = v
+		temp.Next = nil
+
+		list.Next = &temp
+		
+	}
+
+	fmt.Println(list)
 }
